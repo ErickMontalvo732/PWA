@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Progress Web Bar</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/font-awesome/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/all.css">
+    <!-- JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/font-awesome/all.js"></script>
+    <!-- manifest -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <script src="sw-register.js"></script>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="px-3 py-2 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="index.html"
+                    class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <i class="fa fa-beer" style="color:aliceblue;font-size:45px;"></i>
+                    <p style="color:aliceblue;font-size: 50px;">PWABAR</p>
+                </a>
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a href="index.html" class="nav-link text-secondary">
+                            <i class="fa fa-home" style="color:aliceblue;font-size: 24px;"></i><br>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="qr.html" class="nav-link text-secondary">
+                            <i class="fa fa-qrcode" style="color:aliceblue;font-size: 24px;"></i><br>
+                            QR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html" class="nav-link text-secondary">
+                            <i class="fa fa-shopping-cart" style="color:aliceblue;font-size: 24px;"></i><br>
+                            Cart
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html" class="nav-link text-secondary">
+                            <i class="fa fa-location-arrow" aria-hidden="true"
+                                style="color:aliceblue;font-size: 24px;"></i><br>
+                            Map
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info.html" class="nav-link text-secondary">
+                            <i class="fa fa-question" style="color:aliceblue;font-size: 24px;"> </i><br>
+                            Info
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--End Navbar -->
+
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Our Food Rating</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('assets/images/coffe.png'); width: 100%; height: 60%;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Drink 1 Lorem fugit tenetur lorem Lorem ipsum
+                            dolor sit amet consectetur adipisicin</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>Earth</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3" />
+                                </svg>
+                                <small>3d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('assets/images/bebida2.png'); width: 100%; height: 60%;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Drink 2 Lorem fugit tenetur lorem Lorem ipsum
+                            dolor sit amet consectetur adipisicin
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>Pakistan</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3" />
+                                </svg>
+                                <small>4d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('assets/images/bebida3.png'); width: 100%; height: 60%;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Drink 3 Lorem fugit tenetur lorem Lorem ipsum
+                            dolor sit amet consectetur adipisicing</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>California</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3" />
+                                </svg>
+                                <small>5d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('assets/images/coffe.png'); width: 100%; height: 60%;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Drink 1 Lorem fugit tenetur lorem Lorem ipsum
+                            dolor sit amet consectetur adipisicin</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>Earth</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3" />
+                                </svg>
+                                <small>3d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('assets/images/bebida2.png'); width: 100%; height: 60%;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Drink 2 Lorem fugit tenetur lorem Lorem ipsum
+                            dolor sit amet consectetur adipisicin
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>Pakistan</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3" />
+                                </svg>
+                                <small>4d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('assets/images/bebida3.png'); width: 100%; height: 60%;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Drink 3 Lorem fugit tenetur lorem Lorem ipsum
+                            dolor sit amet consectetur adipisicing</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>California</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3" />
+                                </svg>
+                                <small>5d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('assets/images/coffe.png'); width: 100%; height: 60%;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Drink 1 Lorem fugit tenetur lorem Lorem ipsum
+                            dolor sit amet consectetur adipisicin</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>Earth</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3" />
+                                </svg>
+                                <small>3d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('assets/images/bebida2.png'); width: 100%; height: 60%;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Drink 2 Lorem fugit tenetur lorem Lorem ipsum
+                            dolor sit amet consectetur adipisicin
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>Pakistan</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3" />
+                                </svg>
+                                <small>4d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('assets/images/bebida3.png'); width: 100%; height: 60%;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Drink 3 Lorem fugit tenetur lorem Lorem ipsum
+                            dolor sit amet consectetur adipisicing</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>California</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3" />
+                                </svg>
+                                <small>5d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
