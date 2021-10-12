@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Progress Web Bar</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/font-awesome/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/all.css">
+    <!-- JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/font-awesome/all.js"></script>
+    <!-- manifest -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <script src="sw-register.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="px-3 py-2 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="index.html"
+                    class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <i class="fa fa-beer" style="color:aliceblue;font-size:45px;"></i>
+                    <p style="color:aliceblue;font-size: 50px;">PWABAR</p>
+                </a>
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a href="index.html" class="nav-link text-secondary">
+                            <i class="fa fa-home" style="color:aliceblue;font-size: 24px;"></i><br>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="qr.html" class="nav-link text-secondary">
+                            <i class="fa fa-qrcode" style="color:aliceblue;font-size: 24px;"></i><br>
+                            QR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html" class="nav-link text-secondary">
+                            <i class="fa fa-shopping-cart" style="color:aliceblue;font-size: 24px;"></i><br>
+                            Cart
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html" class="nav-link text-secondary">
+                            <i class="fa fa-location-arrow" aria-hidden="true"
+                                style="color:aliceblue;font-size: 24px;"></i><br>
+                            Map
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info.html" class="nav-link text-secondary">
+                            <i class="fa fa-question" style="color:aliceblue;font-size: 24px;"> </i><br>
+                            Info
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--End Navbar -->
+
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Your shopping cart</h2>
+        <br><br>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Picture</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img id="url" class="img-thumbnail" alt="..." width="45%">
+                    </td>
+                    <td style="font-size: 20px;" id="name"></td>
+                    <td id="precio2"></td>
+                </tr>
+                <tr>
+                    <br><br><br>
+                <tr style="text-align:right; font-size: 20px; margin: 0%;">
+                    <th scope="col">Total</th>
+                    <td style="font-size: 20px;" id="precio"></td>
+                </tr>
+                </tr>
+            </tbody>
+          
+        </table>
+    </div>
+
+    <script>
+        var objeto = (localStorage.getItem('localStorage'));
+        var mydata = JSON.parse(objeto); o = "";
+        console.log(mydata.producto.url)
+        document.getElementById("name").innerHTML = mydata.producto.name;
+        document.getElementById("precio").innerHTML = mydata.producto.precio;
+        document.getElementById("precio2").innerHTML = mydata.producto.precio;
+        document.getElementById("url").src = mydata.producto.url;
+    </script>
+</body>
+
+</html>

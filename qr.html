@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Progress Web Bar</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/font-awesome/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/all.css">
+    <!-- JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/font-awesome/all.js"></script>
+    <!-- manifest -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <script src="sw-register.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="px-3 py-2 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="index.html"
+                    class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <i class="fa fa-beer" style="color:aliceblue;font-size:45px;"></i>
+                    <p style="color:aliceblue;font-size: 50px;">PWABAR</p>
+                </a>
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a href="index.html" class="nav-link text-secondary">
+                            <i class="fa fa-home" style="color:aliceblue;font-size: 24px;"></i><br>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="qr.html" class="nav-link text-secondary">
+                            <i class="fa fa-qrcode" style="color:aliceblue;font-size: 24px;"></i><br>
+                            QR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html" class="nav-link text-secondary">
+                            <i class="fa fa-shopping-cart" style="color:aliceblue;font-size: 24px;"></i><br>
+                            Cart
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html" class="nav-link text-secondary">
+                            <i class="fa fa-location-arrow" aria-hidden="true"
+                                style="color:aliceblue;font-size: 24px;"></i><br>
+                            Map
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info.html" class="nav-link text-secondary">
+                            <i class="fa fa-question" style="color:aliceblue;font-size: 24px;"> </i><br>
+                            Info
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--End Navbar -->
+
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Our menu for today's customer</h2>
+        <br><br><br>
+        <div class="container-fluid">
+            <div class="text-center">
+                <img src="assets/images/qr.png" class="qr-code img-thumbnail img-responsive" width="20%" />
+            </div>
+            <br><br><br>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="input-group mb-3">
+                        <input class="form-control me-2 active-pink-2" type="search" placeholder="Search"
+                            aria-label="Search"
+                            style=" border-bottom: 1px solid black; box-shadow: 0 1px 0 0 black; text-align: center; font-size: 30px;"
+                            id="input">
+                        <button onclick="escribir()" type="button" class="btn btn-dark">Function QR</button>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <!-- DIV MOSTRAR U OCULTAR -->
+            <div class="div">
+                <br><br>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/images/menu1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Promo 1 del dia de hoy</h5>
+                                <p class="card-text">Esta oferta incluye todo esto etc...</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white" style="padding-left: 40%; font-size: 20px">
+                                <small class="text-muted">
+                                    Cervezas <br>
+                                    Uvas moradas <br>
+                                    Uvas verdes <br>
+                                    $145
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/images/menu2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Promo 2 del dia de hoy</h5>
+                                <p class="card-text">Esta oferta incluye todo esto etc...</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white" style="padding-left: 40%; font-size: 20px">
+                                <small class="text-muted">
+                                    Cervezas <br>
+                                    Uvas moradas <br>
+                                    Uvas verdes <br>
+                                    $145
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/images/menu3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Promo 3 del dia de hoy</h5>
+                                <p class="card-text">Esta oferta incluye todo esto etc...</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white" style="padding-left: 40%; font-size: 20px">
+                                <small class="text-muted">
+                                    Cervezas <br>
+                                    Uvas moradas <br>
+                                    Uvas verdes <br>
+                                    $145
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/images/menu1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Promo 1 del dia de hoy</h5>
+                                <p class="card-text">Esta oferta incluye todo esto etc...</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white" style="padding-left: 40%; font-size: 20px">
+                                <small class="text-muted">
+                                    Cervezas <br>
+                                    Uvas moradas <br>
+                                    Uvas verdes <br>
+                                    $145
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/images/menu2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Promo 2 del dia de hoy</h5>
+                                <p class="card-text">Esta oferta incluye todo esto etc...</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white" style="padding-left: 40%; font-size: 20px">
+                                <small class="text-muted">
+                                    Cervezas <br>
+                                    Uvas moradas <br>
+                                    Uvas verdes <br>
+                                    $145
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/images/menu3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Promo 3 del dia de hoy</h5>
+                                <p class="card-text">Esta oferta incluye todo esto etc...</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white" style="padding-left: 40%; font-size: 20px">
+                                <small class="text-muted">
+                                    Cervezas <br>
+                                    Uvas moradas <br>
+                                    Uvas verdes <br>
+                                    $145
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/images/menu1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Promo 1 del dia de hoy</h5>
+                                <p class="card-text">Esta oferta incluye todo esto etc...</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white" style="padding-left: 40%; font-size: 20px">
+                                <small class="text-muted">
+                                    Cervezas <br>
+                                    Uvas moradas <br>
+                                    Uvas verdes <br>
+                                    $145
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/images/menu2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Promo 2 del dia de hoy</h5>
+                                <p class="card-text">Esta oferta incluye todo esto etc...</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white" style="padding-left: 40%; font-size: 20px">
+                                <small class="text-muted">
+                                    Cervezas <br>
+                                    Uvas moradas <br>
+                                    Uvas verdes <br>
+                                    $145
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/images/menu3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Promo 3 del dia de hoy</h5>
+                                <p class="card-text">Esta oferta incluye todo esto etc...</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white" style="padding-left: 40%; font-size: 20px">
+                                <small class="text-muted">
+                                    Cervezas <br>
+                                    Uvas moradas <br>
+                                    Uvas verdes <br>
+                                    $145
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DIV MOSTRAR U OCULTAR -->
+            <!-- DATOS HARCODEADOS -->
+            <div class="card text-center">
+                <!-- Name -->
+                <div class="card-header  bg-dark text-white" id="name"
+                    style="text-transform: capitalize; font-size:30px"></div>
+                <div class="card-body">
+                    <!-- Categoria -->
+                    <h5 class="card-title" id="categoria"></h5>
+                    <!-- Imagen -->
+                    <img id="url">
+
+                </div>
+                <div class="card-footer bg-dark text-white">
+                    <!-- Ingredientes -->
+                    Ingredientes: <p id="ing"></p>
+                    <!-- Info -->
+                    Info: <p class="card-text" id="info"></p>
+                    <!-- Precio -->
+                    <p id="precio"></p>
+                    <button onclick="guardarLocalStorage();" type="button" class="btn btn-primary">
+                        Agregar al carrito
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <!--FIN DATOS HARCODEADOS -->
+        </div>
+    </div>
+
+    <script>
+        // Variable Input
+        var boolean = false;
+        var existeEnMenu = [];
+        let inputValue = document.getElementById('input');
+        // Funcion Keyup para input
+        inputValue.addEventListener("keyup", function escribir() {
+            console.log(this.value);
+            // Variables
+            const URL = 'menu.json';
+            let datos = [];
+            var name = ""
+            var info = ""
+            var precio = "";
+            var categoria = "";
+            var ingredientes = "";
+            var urlImg;
+            var allDate = [];
+            // Response JSON
+            fetch(URL)
+                .then(res => res.json())
+                .then((outputJson) => {
+                    datos = outputJson.menu;
+                    for (let index = 0; index <= datos.length; index++) {
+                        // Mostrar / Ocultar
+                        if (this.value == datos[index].producto.name) {
+                            boolean = true;
+                            if (boolean) {
+                                $(".div").hide();
+                            } else {
+                                $(".div").show();
+                            }
+                            existeEnMenu = datos[index];
+                            name = existeEnMenu.producto.name;
+                            info = existeEnMenu.producto.info;
+                            precio = existeEnMenu.producto.precio;
+                            categoria = existeEnMenu.producto.categoria;
+                            ingredientes = existeEnMenu.producto.ingredientes;
+                            urlImg = existeEnMenu.producto.url;
+                            console.log(urlImg, name, info, precio, categoria, ingredientes);
+                            document.getElementById("name").innerHTML = name;
+                            document.getElementById("info").innerHTML = info;
+                            document.getElementById("precio").innerHTML = precio;
+                            document.getElementById("categoria").innerHTML = categoria;
+                            document.getElementById("ing").innerHTML = ingredientes;
+                            document.getElementById("url").src = urlImg;
+                        }
+                    }
+                }).then()
+                .catch(err => { throw err });
+        })
+        function guardarLocalStorage() {
+            localStorage.setItem('localStorage', JSON.stringify(existeEnMenu));
+            window.location.href = 'cart.html';
+        }
+    </script>
+
+</body>
+
+</html>
